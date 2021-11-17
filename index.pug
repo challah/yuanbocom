@@ -5,7 +5,7 @@ html(lang="en")
     - const author="Jordanne Chan"
     - const description="A zombo.com parody featuring my cat Yuanyuan"
     - const site="https://jordanne.ca"
-    - const url="https://jordanne.ca"
+    - const url="https://jordanne.ca/yuanbocom"
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -29,9 +29,9 @@ html(lang="en")
       meta(property="og:image", content="./images/favicon/android-chrome-512x512.png")
     meta(name="twitter:card", content="summary")
     meta(name="twitter:creator", content="@JordanneChan")
-    link(rel="stylesheet", href="style.css")
-    script(src='p5.js')
-    script(src='p5.sound.min.js')
+    link(rel="stylesheet", href="./style.css")
+    script(src='./libraries/p5.js')
+    script(src='./libraries/p5.sound.min.js')
     title=title
   body
     .container
@@ -43,4 +43,4 @@ html(lang="en")
     footer
       p  2021 
         a(href=`${site}`) Jordanne Chan
-    script(src="sketch.js")
+    script(src="./sketch.js")
