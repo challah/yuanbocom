@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  text-align: center;
+  margin: 0;
+  font-family: "DM Sans", Helvetica, sans-serif;
+  color: #010101;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+
+img {
+  width: 100%;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #ee2299;
+  transition: all 0.2s linear;
+}
+
+a:hover {
+  color: #fefefe;
+}
+
+p {
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+/* LAYOUT
+-----------------------------------------*/
+.container {
+  grid-column: 1/-1;
+  padding: 1rem;
+}
+
+footer {
+  display: flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  flex-direction: column;
+  min-height: 50px;
+  /* background: #010101; */
+  color: #010101;
+  justify-content: center;
+  align-items: center;
+  line-height: 50px;
+  grid-row: -1;
+  grid-column: 1/-1;
+}
+
+/* STYLING
+-----------------------------------------*/
+
+h1 {
+  font-size: 2rem;
+}
+
+#button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+}
+
+#scary-button {
+  font-family: 'DM Sans', Helvetica, sans-serif;
+  border: 0;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: "DM Sans", Helvetica, sans-serif;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  font-weight: bold;
+  background-color: #fefefe;
+  color: #010101;
+  border: 1.5px solid #010101;
+  -webkit-box-shadow: 3px 3px #010101;
+          box-shadow: 3px 3px #010101;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+#scary-button:active {
+  -webkit-transform: translate(4px, 4px);
+          transform: translate(4px, 4px);
+  -webkit-box-shadow: 1px 1px;
+          box-shadow: 1px 1px;
+}
+
+#scary-button:hover {
+  -webkit-animation:rainbow 3s infinite;
+  -ms-animation:rainbow 3s infinite;
+  -o-animation:rainbow 3s infinite;
+  animation:rainbow 3s infinite;
+  }
+  @-webkit-keyframes rainbow {
+  0% {background-color: #ff0000;}
+  10% {background-color: #ff8000;}
+  20% {background-color: #ffff00;}
+  30% {background-color: #80ff00;}
+  40% {background-color: #00ff00;}
+  50% {background-color: #00ff80;}
+  60% {background-color: #00ffff;}
+  70% {background-color: #0080ff;}
+  80% {background-color: #0000ff;}
+  90% {background-color: #8000ff;}
+  100% {background-color: #ff0080;}
+  }
+  @-ms-keyframes rainbow {
+  0% {background-color: #ff0000;}
+  10% {background-color: #ff8000;}
+  20% {background-color: #ffff00;}
+  30% {background-color: #80ff00;}
+  40% {background-color: #00ff00;}
+  50% {background-color: #00ff80;}
+  60% {background-color: #00ffff;}
+  70% {background-color: #0080ff;}
+  80% {background-color: #0000ff;}
+  90% {background-color: #8000ff;}
+  100% {background-color: #ff0080;}
+  }
+  @-o-keyframes rainbow {
+  0% {background-color: #ff0000;}
+  10% {background-color: #ff8000;}
+  20% {background-color: #ffff00;}
+  30% {background-color: #80ff00;}
+  40% {background-color: #00ff00;}
+  50% {background-color: #00ff80;}
+  60% {background-color: #00ffff;}
+  70% {background-color: #0080ff;}
+  80% {background-color: #0000ff;}
+  90% {background-color: #8000ff;}
+  100% {background-color: #ff0080;}
+  }
+  @keyframes rainbow {
+  0% {background-color: #ff0000;}
+  10% {background-color: #ff8000;}
+  20% {background-color: #ffff00;}
+  30% {background-color: #80ff00;}
+  40% {background-color: #00ff00;}
+  50% {background-color: #00ff80;}
+  60% {background-color: #00ffff;}
+  70% {background-color: #0080ff;}
+  80% {background-color: #0000ff;}
+  90% {background-color: #8000ff;}
+  100% {background-color: #ff0080;}
+  }
+  
