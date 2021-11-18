@@ -4,6 +4,7 @@ const yuanGraphics = [];
 let yuanHead;
 let rot = 0;
 let zombo;
+let increment = 1;
 
 function preload() {
   yuanHead = loadImage("./images/yuan.png");
@@ -41,12 +42,18 @@ function draw() {
   if (rot >= 360) {
     rot = 0;
   } else {
-    rot+= 4;
+    rot+= increment;
   }
   polygon(0, 0, 74, 6, rot);
   pop();
 
-  // image(yuanHead, mouseX, mouseY, 64, 64);
+  if (!zombo.isPlaying()) {
+    document.querySelector("#scary-button").innerHTML = "ZOMBO 🔊";
+    increment = 1;
+  } else {
+    document.querySelector("#scary-button").innerHTML = "Gah, stop!";
+    increment = 3;
+  }
 }
 
 function polygon(x, y, radius, npoints, rotation = 0) {
@@ -64,14 +71,13 @@ function zomboPlay() {
   if (zombo.isPlaying()) {
     // .isPlaying() returns a boolean
     zombo.stop();
-    document.querySelector("#scary-button").innerHTML = "ZOMBO";
+    // document.querySelector("#scary-button").innerHTML = "ZOMBO";
   } else {
     zombo.play();
-    document.querySelector("#scary-button").innerHTML = "Gah, stop!";
+    // document.querySelector("#scary-button").innerHTML = "Gah, stop!";
   }
 }
 
-// var headerText = document.getElementsByClassName("title")[0].innerHTML;
 const headerText = document.querySelector('h1').innerText;
 const text = headerText.split("");
 document.querySelector('h1').innerHTML = (text.reduce(rainbowText, ""));
